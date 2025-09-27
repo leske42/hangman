@@ -6,4 +6,9 @@
       "path": "C:\\Program Files\\Git\\bin\\bash.exe"
     }
   },
+
+
+C:\Program Files\Git\bin\bash.exe
+
+C:\Program Files\Git\usr\bin\bash.exe
 ```
