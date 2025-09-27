@@ -16,9 +16,6 @@ namespace playground
 
             Console.WriteLine("Guess the Word:");
             Console.WriteLine("Your Hearts: " + hearts);
-            for (int i = 0; i < randomWordGen.Count; i++)
-                Console.Write("_ ");
-            Console.WriteLine();
 
             char guesseLetter = Console.ReadLine().ToLower().TrimStart()[0];
             if (randomWordGen.Contains(guesseLetter))
