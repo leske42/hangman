@@ -16,6 +16,7 @@ namespace playground
                 hearts--;
             guessedLetters.Add(guessedLetter);
             bool win = true;
+            Console.WriteLine();
             for (int i = 0; i < randomWordGen.Count; i++)
             {
                 if (!ContainsLetter(randomWordGen[i]))
@@ -26,6 +27,7 @@ namespace playground
                 else
                     Console.Write(randomWordGen[i] + " ");
             }
+            Console.WriteLine();
             Console.WriteLine();
             return (win);
         }
