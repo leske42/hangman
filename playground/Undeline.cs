@@ -6,7 +6,7 @@ namespace playground
 {
     public class Underline
     {
-        List<char> guessedLetters = new List<char>();
+        public List<char> guessedLetters = new List<char>();
 
         public bool PrintUnderlines(List<char> randomWordGen, char guessedLetter)
         {
@@ -17,14 +17,15 @@ namespace playground
                 if (!ContainsLetter(randomWordGen[i]))
                 {
                     win = false;
-                    Console.Write("_ ");
+                    Console.Write(" _ ");
                 }
                 else
-                    Console.Write(randomWordGen[i]);
+                    Console.Write(randomWordGen[i] + " ");
             }
+            Console.WriteLine();
             return (win);
         }
-        public bool ContainsLetter(char letter)
+        private bool ContainsLetter(char letter)
         {
             if (guessedLetters.Contains(letter))
                 return (true);

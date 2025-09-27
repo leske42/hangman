@@ -25,7 +25,14 @@ namespace playground
                 if (win)
                     break;
                 if (!randomWordGen.Contains(guesseLetter))
+                {
                     hearts--;
+                    if (hearts == 0)
+                    {
+                        Console.WriteLine("You Lost! Try again!");
+                        break ;
+                    }    
+                }
             }
         }
     }  
