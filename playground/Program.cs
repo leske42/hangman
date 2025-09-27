@@ -10,13 +10,12 @@ namespace playground
         {
             secretWord secretWord = new secretWord();
             Underline underlie = new Underline();
-            int hearts = 5;
 
             List<char> randomWordGen = secretWord.RandomWord().ToList();
             while (true)
             {
                 Console.WriteLine();
-                Console.WriteLine("Hearts: " + hearts);
+                Console.WriteLine("Hearts: " + underlie.hearts);
                 Console.WriteLine();
                 Console.Write("Guess the Letter: ");
 
@@ -26,12 +25,11 @@ namespace playground
                     break;
                 if (!randomWordGen.Contains(guesseLetter))
                 {
-                    hearts--;
-                    if (hearts == 0)
+                    if (underlie.hearts == 0)
                     {
                         Console.WriteLine("You Lost! Try again!");
-                        break ;
-                    }    
+                        break;
+                    }
                 }
             }
         }
