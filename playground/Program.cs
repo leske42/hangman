@@ -22,11 +22,16 @@ namespace playground
                 char guesseLetter = Console.ReadLine().ToLower().TrimStart()[0];
                 bool win = underlie.PrintUnderlines(randomWordGen, guesseLetter);
                 if (win)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("You Won! Congrats!");
                     break;
+                }
                 if (!randomWordGen.Contains(guesseLetter))
                 {
                     if (underlie.hearts == 0)
                     {
+                        Console.WriteLine();
                         Console.WriteLine("You Lost! Try again!");
                         break;
                     }
