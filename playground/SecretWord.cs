@@ -9,9 +9,9 @@ namespace playground
         {
             "flower",
             "summer",
-            "book",
+            "jazz",
             "computer",
-            "world"
+            "quiz"
         };
         public void PrintSecretWord()
         {
