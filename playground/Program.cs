@@ -13,15 +13,20 @@ namespace playground
             int hearts = 5;
 
             List<char> randomWordGen = secretWord.RandomWord().ToList();
+            while (true)
+            {
+                Console.WriteLine();
+                Console.WriteLine("Hearts: " + hearts);
+                Console.WriteLine();
+                Console.Write("Guess the Letter: ");
 
-            Console.WriteLine("Guess the Word:");
-            Console.WriteLine("Your Hearts: " + hearts);
-
-            char guesseLetter = Console.ReadLine().ToLower().TrimStart()[0];
-            if (randomWordGen.Contains(guesseLetter))
-                hearts--;
-            Console.WriteLine("Your Hearts: " + hearts);
-
+                char guesseLetter = Console.ReadLine().ToLower().TrimStart()[0];
+                bool win = underlie.PrintUnderlines(randomWordGen, guesseLetter);
+                if (win)
+                    break;
+                if (!randomWordGen.Contains(guesseLetter))
+                    hearts--;
+            }
         }
     }  
 }

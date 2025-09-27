@@ -23,7 +23,6 @@ namespace playground
             Random random = new Random();
             int index = random.Next(words.Count);
             string randomWord = words[index];
-            //Console.WriteLine(randomWord);
             return randomWord;
         }
     }
