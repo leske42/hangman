@@ -21,7 +21,6 @@ namespace playground
                 if (!ContainsLetter(randomWordGen[i]))
                 {
                     win = false;
-                    
                     Console.Write(" _ ");
                 }
                 else
